@@ -1,0 +1,14 @@
+com\paymentchain\products\exception\ApiExceptionHandler.class
+com\paymentchain\products\common\ProductResponseMapperImpl.class
+com\paymentchain\products\exception\BussinesRuleException.class
+com\paymentchain\products\dto\ProductRequest.class
+com\paymentchain\products\common\ProductRequestMapper.class
+com\paymentchain\products\entities\Product.class
+com\paymentchain\products\common\WebClientConfig.class
+com\paymentchain\products\common\ProductRequestMapperImpl.class
+com\paymentchain\products\respository\ProductRepository.class
+com\paymentchain\products\dto\ProductResponse.class
+com\paymentchain\products\common\ProductResponseMapper.class
+com\paymentchain\products\common\StandarizedApiExceptionResponse.class
+com\paymentchain\products\ProductsApplication.class
+com\paymentchain\products\controller\ProductRestController.class

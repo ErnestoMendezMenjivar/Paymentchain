@@ -1,0 +1,49 @@
+server:
+  port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka}
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty.http.client: DEBUG
+
+spring:
+  application:
+    name: apigateway
+  cloud:
+    gateway:
+      routes:
+        - id: customer_full
+          uri: lb://businessdomain-customer
+          predicates:
+          - Path=/customer/full/** 
+          filters:
+          - name: AuthenticationFiltering
+          
+        - id: customer_service
+          uri: lb://businessdomain-customer
+          predicates:
+          - Path=/customer/**
+          - Method=GET,POST,PUT,DELETE
+          filters:
+          - name: AuthenticationFiltering
+                                   
+        - id: productService
+          uri: lb://businessdomain-product
+          predicates:
+          - Path=/product/**
+          - Method=GET,POST,PUT,DELETE
+          filters:
+          - name: AuthenticationFiltering
+            
+        - id: transactionService
+          uri: lb://businessdomain-transactions
+          predicates:
+          - Path=/transaction/**
+          - Method=GET,POST,PUT,DELETE
+          filters:
+          - name: AuthenticationFiltering

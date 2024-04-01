@@ -1,0 +1,9 @@
+com\paymentchain\transactions\common\WebClientConfig.class
+com\paymentchain\transactions\TransactionsApplication.class
+com\paymentchain\transactions\bussines\transactions\BussinesTransaction.class
+com\paymentchain\transactions\common\StandarizedApiExceptionResponse.class
+com\paymentchain\transactions\exception\ApiExceptionHandler.class
+com\paymentchain\transactions\exception\BussinesRuleException.class
+com\paymentchain\transactions\controller\TransactionRestController.class
+com\paymentchain\transactions\respository\TransactionRepository.class
+com\paymentchain\transactions\entities\Transaction.class
